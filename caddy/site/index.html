@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Segurança WNB</title>
+    <style>
+        /* Reset default margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .message {
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 26px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        h3 {
+            color: #ff4d4d;
+            margin-top: 15px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        p, li {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        ul {
+            text-align: left;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            from { text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+            to { text-shadow: 0 0 15px rgba(255, 0, 0, 1); }
+        }
+
+        @keyframes neonEffect {
+            from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00; }
+            to { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ffcc00; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            .message {
+                width: 100%;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>VOCÊ FOI HACKEADO!</h1>
+        <p>Mas calma, isso foi apenas uma simulação de segurança.</p>
+        <p>Se este fosse um ataque real, seus dados pessoais e os da empresa estariam comprometidos...</p>
+        <br></br>
+        <h1>⚠ IMPORTANTE ⚠ </h1>
+        <p>Este é um teste de segurança. Por favor apague o e-mail e não compartilhe essa mensagem com ninguém! Manter o sigilo é fundamental para a eficácia do teste. A equipe de segurança usará este relatório para avaliar e melhorar a proteção da sua conta. Dúvidas? Contate nosso time de segurança.</p>
+<br></br>
+        <h3>✔ Dicas para se proteger contra ataques:</h3>
+        <ul>
+            <li> <strong>Confira sempre o remetente</strong>: E-mails falsos costumam ter endereços parecidos, mas não idênticos aos legítimos.</li>
+            <li> <strong>Passe o mouse sobre links antes de clicar</strong>: Verifique se o destino do link corresponde ao esperado.</li>
+            <li> <strong>Atenção a erros de ortografia e urgência exagerada</strong>: Hackers usam essas táticas para enganar você.</li>
+            <li> <strong>Nunca forneça senhas ou informações sigilosas por e-mail</strong>: Empresas legítimas não pedem isso.</li>
+        </ul>
+    </div>
+</body>
+</html>

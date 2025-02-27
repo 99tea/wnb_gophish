@@ -1,0 +1,35 @@
+(security_headers) {
+    header * {
+            Strict-Transport-Security max-age=31536000;
+            X-Content-Type-Options nosniff
+            X-Frame-Options DENY
+            X-XSS-Protection "1; mode=block"
+            Referrer-Policy no-referrer-when-downgrade
+    }
+}
+
+# Admin Panel (Restrict to Specific IP)
+{$SERVER_IP} {
+    @allowed remote_ip {$ALLOWED_IP}
+    
+    handle @allowed {
+        reverse_proxy localhost:3333
+    }
+
+    handle {
+        respond "Access Denied" 403
+    }
+}
+
+# Webhooks
+http://{$SERVER_IP}/mailgun/webhook {
+        reverse_proxy localhost:5000 
+}
+
+# Landing Page (Dynamic Domains)
+{$LANDING_DOMAINS} {
+    import security_headers
+    root * /var/www/html
+    file_server
+    rewrite * /index.html
+}
