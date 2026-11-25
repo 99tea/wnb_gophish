@@ -96,13 +96,3 @@ Listens for GoPhish webhook events (campaign opened, clicked, submitted data) an
 
 Developed by **99tea**
 ```
-
----
-
-## Key Observations
-
-- ✅ The repository is **infrastructure-focused** — Docker Compose + modular services — rather than a single script.
-- ⚠️ The **original README is essentially empty** (just a title), so the proposed one adds substantial value.
-- 🔍 **No LICENSE file** is present — recommend adding one (MIT/Apache) if distribution is intended.
-- 🔐 The `.env` file is committed — verify it contains **no real secrets**; if it does, rotate them and use `.env.example` instead.
-- 🧪 Folder contents (`gophish/`, `caddy/`, etc.) could not be inspected in detail from the extracted content; a deeper code review would require cloning the repo.
